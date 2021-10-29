@@ -1,0 +1,10 @@
+<mat-card>
+    <mat-card-title>{{movieInput.title}}</mat-card-title>
+    <hr>
+    <mat-card-actions>
+        <img [src]="getMovieImageUrl(movieInput)">
+    </mat-card-actions>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="openMovieDetailDialog()">Más información</button>
+    </mat-card-actions>
+</mat-card>
