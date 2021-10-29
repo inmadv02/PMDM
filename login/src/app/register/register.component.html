@@ -1,0 +1,37 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar>
+<br>
+
+<form>
+    <mat-form-field appearance="legacy">
+        <mat-label for="username">Username</mat-label>
+        <input id="username" type="text" matInput placeholder="Placeholder" [(ngModel)]="registerDto.username" name="username">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+        <mat-label for="email">Email</mat-label>
+        <input id="email" type="text" matInput placeholder="Placeholder" [(ngModel)]="registerDto.email" name="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+        <mat-label for="pssw">Contraseña</mat-label>
+        <input id="pssw" type="password" matInput placeholder="Placeholder" [(ngModel)]="registerDto.password" name="password">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+        <mat-label for="pssw">Confirmar contraseña</mat-label>
+        <input id="pssw" type="password" matInput placeholder="Placeholder">
+    </mat-form-field>
+
+    <button mat-raised-button class="enviar" (click)="doRegister()" color="primary">Enviar</button>
+</form>

@@ -1,0 +1,17 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+mat-toolbar{
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3%;
+}
+
+mat-form-field, .enviar{
+    width: 15%;
+}
