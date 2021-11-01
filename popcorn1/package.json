@@ -16,11 +16,7 @@
     "@angular/compiler": "~12.2.0",
     "@angular/core": "~12.2.0",
     "@angular/forms": "~12.2.0",
-<<<<<<< HEAD:popcorn/package.json
     "@angular/material": "^12.2.12",
-=======
-    "@angular/material": "~12.2.10",
->>>>>>> master:popcorn1/package.json
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",

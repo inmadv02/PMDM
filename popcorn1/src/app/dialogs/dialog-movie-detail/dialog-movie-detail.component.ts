@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MovieResponse } from 'src/app/interfaces/movie.interface';
-import { MoviesService } from 'src/app/service/movies.service';
+import { MoviesService } from 'src/app/services/movies-service'
 
 export interface DialogMovieDetailData{
   movie_id: number;

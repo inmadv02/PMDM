@@ -2,8 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { environment } from 'src/environments/environment';
 import { DialogMovieDetailComponent } from '../dialogs/dialog-movie-detail/dialog-movie-detail.component';
-import { Movie } from '../interfaces/movies.interface';
-import { MoviesService } from '../service/movies.service';
+import { MovieResponse } from '../interfaces/movie.interface';
+
 
 @Component({
   selector: 'app-movie-item',
@@ -12,14 +12,14 @@ import { MoviesService } from '../service/movies.service';
 })
 export class MovieItemComponent implements OnInit {
 
-  @Input() movieInput!: Movie;
+  @Input() movieInput!: MovieResponse;
   
   constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  getMovieImageUrl(movie: Movie){
+  getMovieImageUrl(movie: MovieResponse){
     return `${environment.imageUrl}${movie.poster_path}`;
   }
 

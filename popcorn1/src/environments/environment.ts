@@ -5,13 +5,9 @@
 export const environment = {
   production: false,
   apiBaseUrl: 'https://api.themoviedb.org/3',
-<<<<<<< HEAD:popcorn/src/environments/environment.ts
   apiKey: '1c0ce60ed8e0cd9f90ffb9b539b4c646',
   imageUrl: 'https://image.tmdb.org/t/p/w500'
-=======
-  apiKey: '1c0ce60ed8e0cd9f90ffb9b539b4c646'
-  
->>>>>>> master:popcorn1/src/environments/environment.ts
+
 };
 
 /*

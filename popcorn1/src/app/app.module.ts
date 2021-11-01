@@ -5,47 +5,40 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MovieItemComponent } from './movie-item/movie-item.component';
 import { MoviesPopularListComponent } from './movies-popular-list/movies-popular-list.component';
-<<<<<<< HEAD:popcorn/src/app/app.module.ts
-import { MovieItemComponent } from './movie-item/movie-item.component';
-=======
->>>>>>> master:popcorn1/src/app/app.module.ts
 import { MaterialImportsModule } from './material-imports.module';
-import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { PersonItemComponent } from './person-item/person-item.component';
 import { PopularPeopleComponent } from './popular-people-list/popular-people-list.component';
 import { DialogMovieDetailComponent } from './dialogs/dialog-movie-detail/dialog-movie-detail.component';
 import { SideNavbarComponent } from './side-navbar/side-navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PersonDetailsComponent } from './person-details/person-details.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD:popcorn/src/app/app.module.ts
     MoviesPopularListComponent,
     MovieItemComponent,
     PersonItemComponent,
     PopularPeopleComponent,
     DialogMovieDetailComponent,
-    SideNavbarComponent
+    SideNavbarComponent,
+    PersonDetailsComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     MaterialImportsModule,
     HttpClientModule, 
-    AppRoutingModule
+    HttpClient,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+  
   ],
   entryComponents: [
-    DialogMovieDetailComponent
-=======
+    DialogMovieDetailComponent,
     MovieItemComponent,
     MoviesPopularListComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    HttpClient,
-    MaterialImportsModule
->>>>>>> master:popcorn1/src/app/app.module.ts
   ],
   providers: [],
   bootstrap: [AppComponent]
