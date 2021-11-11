@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { MovieResponse } from '../interfaces/movie.interface';
+import { Movie } from '../interfaces/movies.interface';
 import { MoviesPopularResponse } from '../interfaces/movies.interface';
 import { Person, PopularPeopleResponse } from '../interfaces/people.interface';
 
@@ -27,7 +27,7 @@ export class MoviesService {
   }
 
   getMovie(id: number) {
-    return this.http.get<MovieResponse>(`${API_BASE_URL}/movie/${id}?api_key=${environment.apiKey}`);
+    return this.http.get<Movie>(`${API_BASE_URL}/movie/${id}?api_key=${environment.apiKey}`);
 
   }
   

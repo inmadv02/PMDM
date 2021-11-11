@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { MovieResponse } from 'src/app/interfaces/movie.interface';
+import { Movie } from 'src/app/interfaces/movies.interface';
 import { MoviesService } from 'src/app/services/movies-service'
 
 export interface DialogMovieDetailData{
@@ -14,7 +14,7 @@ export interface DialogMovieDetailData{
 })
 export class DialogMovieDetailComponent implements OnInit {
 
-  movie!: MovieResponse;
+  movie!: Movie;
 
   constructor( @Inject(MAT_DIALOG_DATA) private data: DialogMovieDetailData,
   private moviesService: MoviesService) { }

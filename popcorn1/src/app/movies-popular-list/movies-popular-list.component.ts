@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MoviesPopular } from '../interfaces/movies.interface';
+import { Movie, MoviesPopularResponse } from '../interfaces/movies.interface';
 import { MoviesService } from '../services/movies-service';
 
 @Component({
@@ -9,7 +9,7 @@ import { MoviesService } from '../services/movies-service';
 })
 export class MoviesPopularListComponent implements OnInit {
 
-  moviesList : MoviesPopular [] | undefined;
+  moviesList : Movie [] = [];
 
   constructor(private moviesService: MoviesService) { }
 
@@ -20,7 +20,7 @@ export class MoviesPopularListComponent implements OnInit {
 
 
   getMoviesList() {
-    this.moviesService.getMoviesList().subscribe( resultado => {
+    this.moviesService.getPopularMovies().subscribe( resultado => {
       this.moviesList = resultado.results;
       console.log(resultado);
     });

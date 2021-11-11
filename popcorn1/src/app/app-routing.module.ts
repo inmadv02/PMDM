@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { MoviesPopularListComponent } from './movies-popular-list/movies-popular-list.component';
 import { PopularPeopleComponent } from './popular-people-list/popular-people-list.component';
 import { PersonDetailsComponent } from './person-details/person-details.component';
@@ -13,9 +13,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
