@@ -1,0 +1,15 @@
+<mat-card>
+    <mat-card-content>
+        <circle-progress [percent]="(movieInput.vote_average) * 10" [radius]="25" [showSubtitle]="false">
+        </circle-progress>
+        <img [src]="getMovieImageUrl(movieInput)" height="200px" width="100%" />
+        <h3>{{movieInput.title}}</h3>
+        <p>{{movieInput.overview}}</p>
+    </mat-card-content>
+    <div fxLayout="row" fxLayoutAlign="end center">
+        <button mat-mini-fab color="accent" aria-label="Example icon button with a home icon" (click)="addFavoriteMovie()">
+            <mat-icon *ngIf="!favorito.favorite">favorite_border</mat-icon><mat-icon *ngIf="favorito.favorite" class="white">favorite</mat-icon>
+        </button>
+        <mat-icon (click)="addMovieToList()">playlist_add</mat-icon>
+    </div>
+</mat-card>

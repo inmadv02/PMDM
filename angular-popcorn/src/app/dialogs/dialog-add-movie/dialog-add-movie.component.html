@@ -1,0 +1,40 @@
+<ng-container *ngIf="movie">
+    <h1 mat-dialog-title>{{movie?.original_title}}</h1>
+    <div mat-dialog-content fxLayout="row wrap" fxLayoutGap="40px grid">
+        <div fxFlex="30">
+            <img [src]="getMovieImageUrl(movie)" width="100%" />
+        </div>
+        <div fxFlex="70">
+            <h3>Resumen</h3>
+            <p>{{movie?.overview}}</p>
+
+            <h3>Fecha de estreno</h3>
+            <p>{{movie?.release_date}}</p>
+        </div>
+        <h3>Añadir a lista de películas</h3>
+        <mat-form-field appearance="fill">
+            <mat-label>Listas</mat-label>
+            <mat-select [(ngModel)]="list_id">
+                <mat-option *ngFor="let list of lists" [value]="list.id">{{list.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <button mat-raised-button color="accent" (click)="addMovieToList()" mat-dialog-close>Añadir</button>
+    <hr>
+    <p class="nueva">¿Prefieres añadir una nueva lista?</p>
+    <div fxLayout="column wrap">
+        <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input matInput [(ngModel)]="nombre">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Idioma</mat-label>
+            <input matInput [(ngModel)]="idioma">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Descripción</mat-label>
+            <textarea matInput [(ngModel)]="descripcion"></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="accent" (click)="addNewList()">Crear una nueva lista</button>
+    </div>
+</ng-container>

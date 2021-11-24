@@ -1,0 +1,11 @@
+<div class="contenedor" fxLayout="row wrap" fxfxLayoutAlign="space-around center" fxLayoutGap="40px grid" fxFlex="80">
+<div *ngFor="let fav of favoriteMovies" fxFlex="20">
+    <mat-card>
+        <mat-card-content>
+            <img [src]="getMovieImageUrl(fav)" height="200px" width="100%">
+            <h3>{{fav.title}}</h3>
+            <p>{{fav.overview}}</p>
+        </mat-card-content>
+    </mat-card>
+</div>
+</div>

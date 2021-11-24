@@ -1,0 +1,17 @@
+<app-nav></app-nav>
+<div class="filtro">
+    <mat-form-field appearance="fill">
+        <mat-label>Géneros</mat-label>
+        <mat-select [(ngModel)]="genero_id">
+            <mat-option *ngFor="let genero of generos" [value]="genero.id">{{genero.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="filterMoviesByGenre()">Filtrar</button>
+    <button mat-raised-button (click)="noFilter()">Quitar</button>
+</div>
+<div>
+    <div fxLayout="row wrap" fxfxLayoutAlign="space-around center" fxLayoutGap="40px grid">
+        <app-movie-item class="movie-item" fxFlex="15" *ngFor="let movie of listaNueva" [movieInput]="movie">
+        </app-movie-item>
+    </div>
+</div>

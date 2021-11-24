@@ -1,0 +1,14 @@
+div {
+    justify-content: center;
+    justify-items: center;
+    margin-top: 2%;
+}
+
+.filtro {
+    margin: 1.2%;
+}
+
+.filtro button {
+    margin-left: 10px;
+    
+}
