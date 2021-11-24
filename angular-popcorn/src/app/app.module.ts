@@ -17,6 +17,8 @@ import { ListComponent } from './components/list/list.component';
 import { FormsModule } from '@angular/forms';
 import { FavoriteListComponent } from './shared/favorite-list/favorite-list.component';
 import { NavComponent } from './shared/nav/nav.component';
+import { FormGroup, FormControl } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { NavComponent } from './shared/nav/nav.component';
     HttpClientModule,
     FlexLayoutModule, 
     FormsModule,
+    ReactiveFormsModule,
     NgCircleProgressModule.forRoot({
       // set defaults here
       radius: 25,

@@ -4,6 +4,7 @@ import { List } from 'src/app/models/interfaces/list.interface';
 import { Movie } from 'src/app/models/interfaces/movies-popular.interface';
 import { Media, MoviesService } from 'src/app/services/movies.service';
 import { environment } from 'src/environments/environment';
+import { FormGroup, FormControl } from '@angular/forms';
 
 export interface DialogAddMovieComponent{
   id: number;
