@@ -1,1 +1,17 @@
-<p>sign-up-form works!</p>
+<div formGroupName="registerForm" (ngSubmit)="">
+    <mat-form-field appearance="fill">
+        <mat-label for="username">Nombre de usuario</mat-label>
+        <input matInput id="username" formControlName="username">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label for="email">Email</mat-label>
+        <input matInput formControlName="email">
+    </mat-form-field>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label for="password">Password</mat-label>
+        <input type="password" matInput formControlName="password">
+    </mat-form-field>
+
+    <button type="submit" (click)="register()">Registrarse</button>
+</div>

@@ -4,6 +4,6 @@ export interface SignUpResponse {
    email: string,
    role: string,
    photoUrl: string,
-   created: localtimestamp;
-  "active": false
+   created: Date;
+   active: boolean;
 }

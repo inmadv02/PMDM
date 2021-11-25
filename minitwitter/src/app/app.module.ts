@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { SignUpFormComponent } from './components/sign-up-form/sign-up-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialImportsModule } from './modules/material-imports.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import { SignUpFormComponent } from './components/sign-up-form/sign-up-form.comp
     SignUpFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MaterialImportsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
