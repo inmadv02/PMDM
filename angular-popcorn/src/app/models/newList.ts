@@ -6,6 +6,6 @@ export class AddNewList {
     constructor() {
         this.name = "";
         this.description = "";
-        this.language = "es"
+        this.language = "es-ES"
     }
 }

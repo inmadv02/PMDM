@@ -24,16 +24,12 @@
     <p class="nueva">¿Prefieres añadir una nueva lista?</p>
     <div fxLayout="column wrap">
         <mat-form-field appearance="fill">
-            <mat-label>Nombre</mat-label>
-            <input matInput [(ngModel)]="nombre">
+            <mat-label for="nombre">Nombre</mat-label>
+            <input matInput [(ngModel)]="nombre" id="nombre" [formControl]="nombre">
         </mat-form-field>
         <mat-form-field appearance="fill">
-            <mat-label>Idioma</mat-label>
-            <input matInput [(ngModel)]="idioma">
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-            <mat-label>Descripción</mat-label>
-            <textarea matInput [(ngModel)]="descripcion"></textarea>
+            <mat-label for="descripcion">Descripción</mat-label>
+            <textarea matInput [(ngModel)]="descripcion" id="descripcion" [formControl]="descripcion"></textarea>
         </mat-form-field>
         <button mat-raised-button color="accent" (click)="addNewList()">Crear una nueva lista</button>
     </div>
