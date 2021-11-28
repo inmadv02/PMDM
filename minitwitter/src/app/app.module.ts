@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { SignUpFormComponent } from './components/sign-up-form/sign-up-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialImportsModule } from './modules/material-imports.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { MaterialImportsModule } from './modules/material-imports.module';
   imports: [
     BrowserModule,
     MaterialImportsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

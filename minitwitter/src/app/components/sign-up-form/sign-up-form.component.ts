@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SignUpDto } from 'src/app/models/dto/SignUpDto.dto';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -13,10 +13,17 @@ export class SignUpFormComponent implements OnInit {
   dto = new SignUpDto ();
 
   registerForm = new FormGroup ({
-    username : new FormControl (' '),
-    email : new FormControl (' '),
-    password : new FormControl (' ')
-  })
+    username : new FormControl (this.dto.username, 
+      [ Validators.required, 
+        Validators.minLength(4)
+      ]),
+    email : new FormControl (this.dto.email, 
+      [ Validators.required
+    ]),
+    password : new FormControl (this.dto.password, 
+      [ Validators.required
+    ])
+  });
 
   constructor(private service : AuthService) { }
 
@@ -30,6 +37,7 @@ export class SignUpFormComponent implements OnInit {
       alert("Te has registrado");
     })
   }
+
 
 
 }

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'https://www.minitwitter.com:3001/api/'
+  apiBaseUrl: 'https://www.minitwitter.com:3001/api'
 };
 
 /*
