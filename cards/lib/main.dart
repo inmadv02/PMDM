@@ -33,9 +33,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Center(
           child: Padding(
-        padding: const EdgeInsets.all(5.0),
+        padding: const EdgeInsets.all(4.0),
         child: SizedBox(
-          width: MediaQuery.of(context).size.width * 0.9,
+          width: MediaQuery.of(context).size.width * 1,
           height: MediaQuery.of(context).size.height * 0.4,
           child: Card(
             shape: RoundedRectangleBorder(
@@ -45,34 +45,40 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.all(15.0),
               child: Column(children: <Widget>[
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                        margin: const EdgeInsets.only(right: 20.0),
-                        child: Text('El más barato, Buena puntuación',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.tealAccent[400]))),
-                    Container(
-                        margin: const EdgeInsets.only(left: 40.0),
-                        child: const Text('45 ofertas',
-                            style: TextStyle(color: Colors.grey)))
+                    Text('El más barato, Buena puntuación',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.tealAccent[400],
+                            fontSize: 13)),
+                    const Text('45 ofertas',
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 13))
                   ],
                 ),
                 const SizedBox(height: 20),
-                Image.asset('assets/coche.png', width: 200),
+                Image.asset('assets/coche.png', width: 190),
                 Row(children: const [
                   Text('Mini',
                       textAlign: TextAlign.left, style: TextStyle(fontSize: 18))
                 ]),
-                const SizedBox(height: 7),
+                const SizedBox(height: 4),
                 Row(children: const [
                   Text('2-3 puertas · Citroen C1 Diesel o similar',
                       textAlign: TextAlign.start,
                       style: TextStyle(color: Colors.grey))
                 ]),
-                const SizedBox(height: 7),
+                const SizedBox(height: 4),
                 Row(
                   children: const [
+                    Icon(
+                      Icons.dashboard,
+                      size: 14,
+                    ),
+                    SizedBox(width: 6),
                     Text('Man'),
                     SizedBox(width: 15),
                     Icon(
@@ -101,16 +107,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.grey,
                   thickness: 0.5,
                 ),
-                Row(children: [
-                  Container(
-                      margin: const EdgeInsets.only(right: 106.0),
-                      child: Text('35€',
-                          style: TextStyle(color: Colors.blue[900]))),
-                  Container(
-                      margin: const EdgeInsets.only(left: 106.0),
-                      child: Text('SELECCIONAR',
-                          style: TextStyle(color: Colors.blue[900])))
-                ])
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                          margin: const EdgeInsets.only(right: 103.0),
+                          child: Text('35€',
+                              style: TextStyle(color: Colors.blue[900]))),
+                      Container(
+                          margin: const EdgeInsets.only(left: 103.0),
+                          child: Text('SELECCIONAR',
+                              style: TextStyle(color: Colors.blue[900])))
+                    ])
               ]),
             ),
           ),
