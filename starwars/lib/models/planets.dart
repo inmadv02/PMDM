@@ -1,5 +1,5 @@
-class AutoGenerate {
-  AutoGenerate({
+class Planets {
+  Planets({
     required this.count,
     required this.next,
     this.previous,
@@ -10,7 +10,7 @@ class AutoGenerate {
   late final Null previous;
   late final List<Results> results;
 
-  AutoGenerate.fromJson(Map<String, dynamic> json) {
+  Planets.fromJson(Map<String, dynamic> json) {
     count = json['count'];
     next = json['next'];
     previous = null;
