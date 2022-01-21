@@ -1,73 +1,60 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  final appTitle = 'Drawer Demo';
+
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      title: appTitle,
+      home: MyHomePage(title: appTitle),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
+class MyHomePage extends StatelessWidget {
   final String title;
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
-class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
-      body: const Center(
-        child: Text('My Page!'),
-      ),
+      appBar: AppBar(title: Text(title)),
+      body: const Center(child: Text('My Page!')),
       drawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
+        // Agrega un ListView al drawer. Esto asegura que el usuario pueda desplazarse
+        // a través de las opciones en el Drawer si no hay suficiente espacio vertical
+        // para adaptarse a todo.
         child: ListView(
-          // Important: Remove any padding from the ListView.
+          // Importante: elimina cualquier padding del ListView.
           padding: EdgeInsets.zero,
-          children: [
+          children: <Widget>[
             const DrawerHeader(
+              child: Text('Drawer Header'),
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
-              child: Text('Drawer Header'),
             ),
             ListTile(
               title: const Text('Item 1'),
               onTap: () {
+                // Actualiza el estado de la aplicación
+                // ...
+                // Luego cierra el drawer
                 Navigator.pop(context);
               },
             ),
             ListTile(
               title: const Text('Item 2'),
               onTap: () {
-                // Update the state of the app
+                // // Actualiza el estado de la aplicación
                 // ...
-                // Then close the drawer
+                // Luego cierra el drawer
                 Navigator.pop(context);
               },
             ),
