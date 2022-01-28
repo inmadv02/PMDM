@@ -67,9 +67,8 @@ class _MoviesPageState extends State<MoviesPage> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: InkWell(
         splashColor: Colors.blue.withAlpha(30),
-        onTap: () {
-          debugPrint('Card tapped.');
-        },
+        onTap: () =>
+            Navigator.pushNamed(context, '/film-details', arguments: movie),
         child: SizedBox(
             width: 200,
             height: 200,
